@@ -9,7 +9,4 @@ export default defineConfig({
     reactRouter(),
     tsconfigPaths()
   ],
-  css: {
-    postcss: "./postcss.config.js",
-  },
 });
