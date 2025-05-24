@@ -1,6 +1,6 @@
-import { Layout } from "app/components/layout/Layout";
 import type React from "react";
 import { useAuth } from "app/hooks/useAuth";
+import { Layout } from "~/root";
 
 export const HomePage: React.FC = () => {
   const { user } = useAuth();

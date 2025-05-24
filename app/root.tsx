@@ -4,9 +4,14 @@ import {
   Outlet,
   Scripts,
   ScrollRestoration,
+  type LinksFunction,
 } from "react-router";
-import { AuthProvider } from "./contexts/AuthContext";
-import "./styles/globals.css";
+
+import stylesheet from "./styles/globals.css?url";
+
+export const links: LinksFunction = () => [
+  { rel: "stylesheet", href: stylesheet },
+];
 
 export function Layout({ children }: { children: React.ReactNode }) {
   return (
@@ -18,9 +23,7 @@ export function Layout({ children }: { children: React.ReactNode }) {
         <Links />
       </head>
       <body>
-        <AuthProvider>
-          {children}
-        </AuthProvider>
+        {children}
         <ScrollRestoration />
         <Scripts />
       </body>
